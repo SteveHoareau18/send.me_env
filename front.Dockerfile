@@ -30,6 +30,9 @@ RUN mkdir /var/run/sshd && \
     echo "root:root" | chpasswd
 
 WORKDIR /home
+
+RUN rm -rf send.me
+
 RUN git clone https://github.com/SteveHoareau18/send.me
 
 WORKDIR /home/send.me/sendme_front
