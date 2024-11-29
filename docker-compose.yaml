@@ -1,0 +1,17 @@
+services:
+  sendme_front:
+    container_name: sendme_front
+    build:
+      dockerfile: front.Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3000:3000"
+      - "2121:22"
+  sendme_back:
+    container_name: sendme_back
+    build:
+      dockerfile: back.Dockerfile
+    ports:
+      - "8000:8000"
+      - "2222:22"
