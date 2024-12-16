@@ -37,8 +37,8 @@ RUN git clone https://github.com/SteveHoareau18/send.me
 
 WORKDIR /home/send.me/sendme_front
 
-RUN npm install
+RUN git pull
 
 EXPOSE 22 3000 80 443
 
-CMD /usr/sbin/sshd -D & npm start
+CMD /usr/sbin/sshd -D
